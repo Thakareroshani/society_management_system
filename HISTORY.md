@@ -1,82 +1,53 @@
-2.0.1 / 2021-01-03
+2.3.3 / 2022-03-06
 ==================
 
-  * Fix returning values from `Object.prototype`
+  * Fix escaping `Date` objects from foreign isolates
 
-2.0.0 / 2020-04-19
+2.3.2 / 2020-04-15
 ==================
 
-  * Drop support for Node.js 0.6
-  * Fix messaging casing of `418 I'm a Teapot`
-  * Remove code 306
-  * Remove `status[code]` exports; use `status.message[code]`
-  * Remove `status[msg]` exports; use `status.code[msg]`
-  * Rename `425 Unordered Collection` to standard `425 Too Early`
-  * Rename `STATUS_CODES` export to `message`
-  * Return status message for `statuses(code)` when given code
+  * perf: remove outdated array pattern
 
-1.5.0 / 2018-03-27
+2.3.1 / 2018-02-24
 ==================
 
-  * Add `103 Early Hints`
+  * Fix incorrectly replacing non-placeholders in SQL
 
-1.4.0 / 2017-10-20
+2.3.0 / 2017-10-01
 ==================
 
-  * Add `STATUS_CODES` export
+  * Add `.toSqlString()` escape overriding
+  * Add `raw` method to wrap raw strings for escape overriding
+  * Small performance improvement on `escapeId`
 
-1.3.1 / 2016-11-11
+2.2.0 / 2016-11-01
 ==================
 
-  * Fix return type in JSDoc
+  * Escape invalid `Date` objects as `NULL`
 
-1.3.0 / 2016-05-17
+2.1.0 / 2016-09-26
 ==================
 
-  * Add `421 Misdirected Request`
-  * perf: enable strict mode
+  * Accept numbers and other value types in `escapeId`
+  * Run `buffer.toString()` through escaping
 
-1.2.1 / 2015-02-01
+2.0.1 / 2016-06-06
 ==================
 
-  * Fix message for status 451
-    - `451 Unavailable For Legal Reasons`
+  * Fix npm package to include missing `lib/` directory
 
-1.2.0 / 2014-09-28
+2.0.0 / 2016-06-06
 ==================
 
-  * Add `208 Already Repored`
-  * Add `226 IM Used`
-  * Add `306 (Unused)`
-  * Add `415 Unable For Legal Reasons`
-  * Add `508 Loop Detected`
+  * Bring repository up-to-date with `mysql` module changes
+  * Support Node.js 0.6.x
 
-1.1.1 / 2014-09-24
+1.0.0 / 2014-11-09
 ==================
 
-  * Add missing 308 to `codes.json`
+  * Support Node.js 0.8.x
 
-1.1.0 / 2014-09-21
-==================
-
-  * Add `codes.json` for universal support
-
-1.0.4 / 2014-08-20
-==================
-
-  * Package cleanup
-
-1.0.3 / 2014-06-08
-==================
-
-  * Add 308 to `.redirect` category
-
-1.0.2 / 2014-03-13
-==================
-
-  * Add `.retry` category
-
-1.0.1 / 2014-03-12
+0.0.1 / 2014-02-25
 ==================
 
   * Initial release
