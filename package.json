@@ -1,34 +1,30 @@
 {
-  "name": "safer-buffer",
-  "version": "2.1.2",
-  "description": "Modern Buffer API polyfill without footguns",
-  "main": "safer.js",
+  "name": "path-to-regexp",
+  "description": "Express style path to RegExp utility",
+  "version": "0.1.7",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
   "scripts": {
-    "browserify-test": "browserify --external tape tests.js > browserify-tests.js && tape browserify-tests.js",
-    "test": "standard && tape tests.js"
+    "test": "istanbul cover _mocha -- -R spec"
   },
-  "author": {
-    "name": "Nikita Skovoroda",
-    "email": "chalkerx@gmail.com",
-    "url": "https://github.com/ChALkeR"
+  "keywords": [
+    "express",
+    "regexp"
+  ],
+  "component": {
+    "scripts": {
+      "path-to-regexp": "index.js"
+    }
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChALkeR/safer-buffer.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ChALkeR/safer-buffer/issues"
+    "url": "https://github.com/component/path-to-regexp.git"
   },
   "devDependencies": {
-    "standard": "^11.0.1",
-    "tape": "^4.9.0"
-  },
-  "files": [
-    "Porting-Buffer.md",
-    "Readme.md",
-    "tests.js",
-    "dangerous.js",
-    "safer.js"
-  ]
+    "mocha": "^1.17.1",
+    "istanbul": "^0.2.6"
+  }
 }
